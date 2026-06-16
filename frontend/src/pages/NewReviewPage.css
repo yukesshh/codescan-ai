@@ -1,0 +1,125 @@
+.new-review-page { padding: 2rem; max-width: 1000px; }
+
+.page-header { margin-bottom: 1.5rem; }
+.page-title { font-family: var(--font-display); font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem; }
+.page-subtitle { color: var(--text-muted); font-size: 0.875rem; }
+
+.review-error {
+  background: #ef444415; border: 1px solid #ef444430;
+  color: #ef4444; border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.875rem;
+}
+
+.review-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.form-top-row { display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap; }
+.flex-grow { flex: 1; min-width: 200px; }
+
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label {
+  font-size: 0.78rem; font-weight: 600; color: var(--text-dim);
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.form-group input, .form-group select, .form-group textarea {
+  background: var(--bg-dark); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); color: var(--text);
+  padding: 0.7rem 0.9rem; font-size: 0.9rem; outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s; width: 100%;
+}
+.form-group input:focus, .form-group select:focus {
+  border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow);
+}
+.form-group select { appearance: none; cursor: pointer; }
+
+/* Code editor */
+.code-label-row { display: flex; align-items: center; justify-content: space-between; }
+.code-meta { display: flex; align-items: center; gap: 0.75rem; font-size: 0.78rem; color: var(--text-muted); }
+.sample-btn {
+  background: none; border: 1px solid var(--border); color: var(--accent);
+  font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 6px;
+  transition: all 0.15s;
+}
+.sample-btn:hover { background: var(--accent-glow); border-color: var(--border-glow); }
+
+.code-editor-wrap {
+  display: flex;
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  transition: border-color 0.2s;
+}
+.code-editor-wrap:focus-within { border-color: var(--accent); }
+
+.line-numbers {
+  padding: 0.7rem 0.5rem;
+  background: var(--bg-muted);
+  border-right: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-align: right;
+  user-select: none;
+  min-width: 40px;
+  line-height: 1.6;
+}
+.line-numbers div { padding: 0 0.25rem; }
+
+.code-textarea {
+  flex: 1;
+  background: transparent;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.7rem;
+  resize: none;
+  line-height: 1.6;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  tab-size: 2;
+}
+.code-textarea:focus { outline: none; }
+.code-textarea::placeholder { color: var(--text-muted); }
+
+/* Actions */
+.form-actions { display: flex; gap: 0.75rem; justify-content: flex-end; }
+
+.btn-secondary {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-muted); padding: 0.7rem 1.25rem;
+  border-radius: var(--radius-sm); font-size: 0.875rem; font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(--text-muted); color: var(--text); }
+
+.btn-analyze {
+  background: linear-gradient(135deg, var(--accent), #2563eb);
+  color: white; border: none; padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 700;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: all 0.2s; min-width: 180px; justify-content: center;
+}
+.btn-analyze:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 20px #3b82f640; }
+.btn-analyze:disabled { opacity: 0.8; cursor: not-allowed; }
+
+.analyzing-dots span {
+  animation: pulse 1.2s ease-in-out infinite;
+  font-size: 1.2rem;
+}
+.analyzing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.analyzing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+/* Loading bar */
+.loading-status { text-align: center; }
+.loading-status p { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; }
+.loading-bar {
+  height: 3px; background: var(--bg-muted); border-radius: 999px; overflow: hidden;
+}
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent));
+  background-size: 200%;
+  animation: shimmer 1.5s linear infinite;
+  width: 100%;
+}
