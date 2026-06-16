@@ -3,9 +3,7 @@
 -- Run this in MySQL Workbench or MySQL CLI
 -- ============================================================
 
-CREATE DATABASE IF NOT EXISTS ai_code_review CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE ai_code_review;
-
+USE railway;
 -- Users table
 CREATE TABLE IF NOT EXISTS users (
     id              BIGINT AUTO_INCREMENT PRIMARY KEY,

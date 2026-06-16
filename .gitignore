@@ -30,3 +30,4 @@ logs/
 # Env / secrets
 *.env
 application-prod.properties
+backend/src/main/resources/application.properties.local
